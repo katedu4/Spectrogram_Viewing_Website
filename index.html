@@ -98,15 +98,9 @@
             </a>
 
   	    <a href="2025-10-15-08.59.50.html" class="map-card">
-                
-<div class="map-icon">
- <svg width="60" height="40" viewBox="0 0 100 50" fill="none">
- 	   <path d="M5 25c10-10 25-15 40-12 12 2 20 8 26 14 8 7 20 8 24 0-3 10-12 15-22 15H40c-8 0-20-4-30-12z"
-        stroke="#003049" stroke-width="3" fill="none"/>
-  <circle cx="32" cy="22" r="2.2" fill="#003049"/>
-</svg>
-</div>                <div class="map-title">Sound Source Test</div>
-                <div class="map-description">October 15th, 2025 8:59:50 am</div>
+               <div class="map-icon"></div>
+               <div class="map-title">Sound Source Test</div>
+               <div class="map-description">October 15th, 2025 8:59:50 am</div>
             </a>
 
   	    <a href="2025-11-09-03.37.50.html" class="map-card">
@@ -124,8 +118,8 @@
 
   	    <a href="2025-11-14-01.32.31.html" class="map-card">
                 <div class="map-icon"></div>
-                <div class="map-title">Humpbacks at 1:30 with megapclicks </div>
-                <div class="map-description">November 14th, 2025 1:33:31 am</div>
+                <div class="map-title">Humpbacks at 1:30 with megapclicks (Clip B) </div>
+                <div class="map-description">November 14th, 2025 1:32:31 am</div>
             </a>
 
   	    <a href="2025-11-14-01.33.01.html" class="map-card">
@@ -143,9 +137,28 @@
         </div>
     </div>
 
-    <script>
-        // Add current date
-        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
-    </script>
+          
+   
+<script>
+    // Whale SVG
+    const whaleSVG = `
+    <svg width="60" height="40" viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 20c10-8 28-6 38-4s20 6 22 8c0 0-4 2-10 0s-14-6-28-4c-6 1-12 2-14 4z" fill="#003049"/>
+        <circle cx="50" cy="18" r="2" fill="#003049"/>
+    </svg>
+    `;
+
+    // Add whale SVG to all empty .map-icon divs
+    document.querySelectorAll('.map-icon').forEach(div => {
+        if (div.innerHTML.trim() === '') {
+            div.innerHTML = whaleSVG;
+        }
+    });
+
+    // Add current date
+    document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
+
+</script>
+
 </body>
 </html>
